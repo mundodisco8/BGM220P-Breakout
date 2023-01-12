@@ -6,8 +6,9 @@
 
   (title_block
     (title "BGM220P Breakout Board")
-    (date "2023-01-05")
+    (date "${TODAY}")
     (rev "v1.0.0")
+    (comment 1 "Docs Generated from commit ${GIT_HASH}")
   )
 
   (lib_symbols
