@@ -12,7 +12,7 @@ global:
     # The silkscreen of the programming header sits on top of the board edge and it's clipped. It's ok
     - filter: 'Silkscreen of header is clipped'
       number: 58
-      regex: '@(114.5000 mm, 115.5000 mm): Line on Edge.Cuts'
+      regex: '114.5000 mm, 115.5000 mm[.]+Line on Edge.Cuts'
     # Missing config file in the docker image
     - filter: 'No kicad_common.json'
       number: 58
