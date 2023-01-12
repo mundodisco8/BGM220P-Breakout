@@ -9,29 +9,14 @@ global:
   # Acknoledge some of the WARNINGS thrown in the process
   # Errors in other areas, when filtered, will appear as warnings, and can be also be filtered here too
   filters:
-    # S1 is the silkscreen with the text in the back (turn this...). It doesn't have a symbol associated in the schematic
-    - filter: 'S1 in board, but not in schematic'
-      number: 13
-      regex: 'S1'
-    # DRC error on courtyard overlap is now a warning
-    - filter: 'Courtyard overlap Battery/counter warning'
+    # The silkscreen of the programming header sits on top of the board edge and it's clipped. It's ok
+    - filter: 'Silkscreen of header is clipped'
       number: 58
-      regex: 'Footprint U2\n.+BT1'
-    - filter: "Battery Internal connection"
+      regex: '@(114.5000 mm, 115.5000 mm): Line on Edge.Cuts'
+    # Missing config file in the docker image
+    - filter: 'No kicad_common.json'
       number: 58
-      regex: 'BT1 on B.Cu\n.+BT1 on B.Cu'
-    # Complaint about the resistor of the potentiometer being `0-50k`
-    - filter: 'Pot value'
-      number: 20
-      regex: '0-50k'
-    # The docker image has no environment.vars in kicad_common.json
-    - filter: 'No Environment Vars'
-      number: 9
-      regex: 'environment.vars'
-    # I "think" the image has no 3D models to reduce size...
-    - filter: 'No 3D Models'
-      number: 10
-      regex: 'Unable to find KiCad 3D models'
+      regex: 'Missing KiCad main config file'
 
 preflight:
   # [dict] Annotates the PCB according to physical coordinates.
@@ -199,23 +184,7 @@ outputs:
         - field: "Row"
         - field: "References"
         - field: "Value"
-        - field: "Quantity Per PCB"
-        - field: "Description"
-        - comment: "A column joining all the ratings"
-          field: "Tolerance"
-          name: "Ratings"
-          join:
-            - field: "TempCoef"
-              text_before : " / "
-            - field: "Vrating"
-              text_before : " / "
-        - field: "Package"
-        - field: "MPN"
-        - field: "Manufacturer"
-        - field: "Digikey PN"
-        - field: "Farnell PN"
         - field: "Datasheet"
-        - field: "Comments"
       # [list(list(string))] A series of values which are considered to be equivalent for the part name.
       # Each entry is a list of equivalen names. Example: ['c', 'c_small', 'cap' ]
       # will ensure the equivalent capacitor symbols can be grouped together.
@@ -532,23 +501,7 @@ outputs:
         - field: "Row"
         - field: "References"
         - field: "Value"
-        - field: "Quantity Per PCB"
-        - field: "Description"
-        - comment: "A column joining all the ratings"
-          field: "Tolerance"
-          name: "Ratings"
-          join:
-            - field: "TempCoef"
-              text_before : " / "
-            - field: "Vrating"
-              text_before : " / "
-        - field: "Package"
-        - field: "MPN"
-        - field: "Manufacturer"
-        - field: "Digikey PN"
-        - field: "Farnell PN"
         - field: "Datasheet"
-        - field: "Comments"
       # [list(list(string))] A series of values which are considered to be equivalent for the part name.
       # Each entry is a list of equivalen names. Example: ['c', 'c_small', 'cap' ]
       # will ensure the equivalent capacitor symbols can be grouped together.
