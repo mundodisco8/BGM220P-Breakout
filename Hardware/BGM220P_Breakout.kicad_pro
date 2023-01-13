@@ -55,7 +55,11 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "silk_over_copper|102700000|115500000|5fe9b7d8-a0de-4857-84b6-699e22105421|3253cf4a-42d4-4a88-ab71-83a13149f797",
+        "silk_over_copper|102700000|115500000|5fe9b7d8-a0de-4857-84b6-699e22105421|edfde834-ad0d-4df3-9df5-5a0f68dce5a6",
+        "silk_over_copper|97200000|115500000|5fe9b7d8-a0de-4857-84b6-699e22105421|256efe27-188a-4b6a-966c-e4adc5a3225a"
+      ],
       "meta": {
         "version": 2
       },
@@ -113,7 +117,7 @@
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.19999999999999998,
         "min_via_annular_width": 0.049999999999999996,
-        "min_via_diameter": 0.39999999999999997,
+        "min_via_diameter": 0.5,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "use_height_for_length_calcs": true
@@ -367,7 +371,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "via_drill": 0.5,
         "wire_width": 6.0
       },
       {
@@ -387,7 +391,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "via_drill": 0.5,
         "wire_width": 6.0
       }
     ],
