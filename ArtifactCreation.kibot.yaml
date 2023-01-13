@@ -9,10 +9,6 @@ global:
   # Acknoledge some of the WARNINGS thrown in the process
   # Errors in other areas, when filtered, will appear as warnings, and can be also be filtered here too
   filters:
-    # The silkscreen of the programming header sits on top of the board edge and it's clipped. It's ok
-    - filter: 'Silkscreen of header is clipped'
-      number: 58
-      regex: '114.5000 mm, 115.5000 mm[.]+Line on Edge.Cuts'
     # Missing config file in the docker image
     - filter: 'No kicad_common.json'
       number: 58
@@ -50,14 +46,10 @@ preflight:
   # To farther ignore these warnings use the `filters` option in the `global` section.
   # Acknowledge DRC errors
   filters:
-    # The courtyard from the battery holder and counter overlap slightly
-    - filter: "Courtyard from battery and counter overlap slightly"
-      error: 'courtyards_overlap'
-      regex: 'Footprint U2\n.+BT1'
-    # The battery holder has an "internal" connection and kicad doesn't like it...
-    - filter: "Battery Internal connection"
-      error: 'unconnected_items'
-      regex: 'BT1 on B.Cu\n.+BT1 on B.Cu'
+    # The silkscreen of the programming header sits on top of the board edge and it's clipped. It's ok
+    - filter: 'Silkscreen of header is clipped'
+      error: 'silk_over_copper'
+      regex: '114\.5000 mm, 115\.5000 mm.+Line on Edge\.Cuts'
   # [boolean=false] Option for `run_drc`. Ignores the unconnected nets. Useful if you didn't finish the routing.
   ignore_unconnected: false
   # [dict] Replaces tags in the PCB. I.e. to insert the git hash or last revision date.

@@ -101,6 +101,9 @@
     )
   )
 
+  (property "GIT_HASH" "COMMIT_HASH")
+  (property "TODAY" "DATE")
+
   (net 0 "")
   (net 1 "VCC")
   (net 2 "GND")
