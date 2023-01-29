@@ -30,3 +30,7 @@ hardware/*backups/**
 
 # Kibot
 kibot_errors.filter
+*-[ed]rc.txt
+*.ogv
+*.log
+Artifacts/**

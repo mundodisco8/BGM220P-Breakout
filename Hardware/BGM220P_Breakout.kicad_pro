@@ -456,7 +456,7 @@
     ]
   ],
   "text_variables": {
-    "GIT_HASH": "COMMIT_HASH",
-    "TODAY": "DATE"
+    "GIT_HASH": "<2e12117>",
+    "TODAY": "2e12117"
   }
 }

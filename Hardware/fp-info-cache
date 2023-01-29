@@ -1,4 +1,4 @@
-20891769242209345
+20891773037357206
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -26,7 +26,7 @@ BGM220P_Header
 
 0
 32
-16
+32
 BGM220P_Breakout
 PinHeader_1x16_P1.27mm_Vertical_Offset
 1x16 TH 1.27mm pitch, Low Profile
