@@ -335,7 +335,7 @@
       f91b9efa-3cae-4dec-a9b1-33757a5b3478
     )
   )
-  (model "${KIPRJMOD}/Libraries/BGM220P_Breakout.pretty/Header - 2x05 0.05 SMD Shrouded - Ampheno20021521-00010XXLFc v2.step"
+  (model "${KIPRJMOD}/Libraries/BGM220P_Breakout.pretty/3D Models/Header - 2x05 0.05 SMD Shrouded - Ampheno20021521-00010XXLFc v2.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

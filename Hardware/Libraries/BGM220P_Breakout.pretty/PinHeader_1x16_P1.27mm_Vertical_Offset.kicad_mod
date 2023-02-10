@@ -48,7 +48,7 @@
   (pad "14" thru_hole oval (at 0.127 6.985) (size 1 1) (drill 0.65) (layers *.Cu *.Mask) (tstamp 6e341887-4f57-4dbf-b771-3138d7a6bbe9))
   (pad "15" thru_hole oval (at -0.127 8.255) (size 1 1) (drill 0.65) (layers *.Cu *.Mask) (tstamp 5ba7b180-b933-4ea5-9c3e-dc1e7172fd46))
   (pad "16" thru_hole oval (at 0.127 9.525) (size 1 1) (drill 0.65) (layers *.Cu *.Mask) (tstamp 5abef56d-6952-4f4a-8aeb-da3e5f9ec0d0))
-  (model "${KIPRJMOD}/Libraries/BGM220P_Breakout.pretty/3D Models/Header - 1x16 0.05 TH Low Prof (3mm) - Adam Tech HPH1-B-16-U v2.step"
+  (model "${KIPRJMOD}/Libraries/BGM220P_Breakout.pretty/3D Models/Header - 1x16 0.05 TH Low Prof (3mm) - Adam Tech HPH1-B-16-U v4.step"
     (offset (xyz 0 0 0.5))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 90))
